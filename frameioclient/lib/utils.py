@@ -147,10 +147,7 @@ class Utils:
             digestmod=hashlib.sha256).hexdigest())
         if calculated_signature == signature:
             return True
-        else:
-            return False
-    else:
-        return False
+    return False
 
 class PaginatedResponse(object):
   def __init__(self, results=[], limit=None, page_size=0, total=0,
